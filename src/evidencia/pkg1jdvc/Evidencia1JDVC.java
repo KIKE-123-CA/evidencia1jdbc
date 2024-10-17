@@ -52,6 +52,13 @@ public class Evidencia1JDVC {
             while(rs.next()){
                 System.out.println(rs.getString("nombre"));
             }
+            //eliminacion
+            statement.execute("DELETE FROM `usuario` WHERE `usuario`.`Idusuario` = 2;");
+             System.out.println("");
+            rs = statement.executeQuery("select * from usuario");
+            while(rs.next()){
+                System.out.println(rs.getString("nombre"));
+            }
         } catch (SQLException ex) {
             Logger.getLogger(Evidencia1JDVC.class.getName()).log(Level.SEVERE, null, ex);
         }
