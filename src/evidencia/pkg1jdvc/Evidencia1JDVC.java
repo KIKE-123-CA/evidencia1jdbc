@@ -39,7 +39,14 @@ public class Evidencia1JDVC {
             }
             
             //insertar datos
-            statement.execute("INSERT INTO `usuario` (`idusuario`, `nombre`, `password`) VALUES ('2', 'maria', '345');"); 
+            //statement.execute("INSERT INTO `usuario` (`idusuario`, `nombre`, `password`) VALUES ('2', 'maria', '345');"); 
+             //System.out.println("");
+            //rs = statement.executeQuery("select * from usuario");
+            //while(rs.next()){
+               // System.out.println(rs.getString("nombre"));
+            //}
+            //actulizar datos
+            statement.execute("UPDATE `usuario` SET `nombre` = 'rosa' WHERE `usuario`.`Idusuario` = 2;");
              System.out.println("");
             rs = statement.executeQuery("select * from usuario");
             while(rs.next()){
